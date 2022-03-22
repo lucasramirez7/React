@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React CDN</title>
+    
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+<body>
+<div id="root"></div>
+
+
+<script type="text/babel">
+
+/*
+***ESCRIBIMOS HOLA MUNDO (PRIMER PARAMETRO LA ETIQUETA HTML, DESPUES EL VALOR Y LUEGO EL ID)***
+ReactDOM.render(React.createElement("h1", null, "HOLA MUNDO EN REACT"), document.getElementById("root") );
+
+***UNA ORDER LIST CON LA MISMA FUNCION REACT FUNCIONES DE REACT MULTIPLES***
+
+ReactDOM.render(
+React.createElement("ol", null, 
+React.createElement("li",null,"Uva"),
+React.createElement("li",null,"Manzana"),
+React.createElement("li",null,"Pera"),
+React.createElement("li",null,"Banana"),
+), 
+document.getElementById("root")
+);
+*/
+
+//*****BABEL******
+
+// console.log(React);
+
+//UTILIZAR REACT COMO COMPONENTE RETORNANDO LAS ETIQUETAS DE HTML
+
+/*
+
+ReactDOM.render( <Saludo/> , document.getElementById("root"));
+/*
+ReactDOM.render( 
+    <div>
+        <ul>
+         <li>Manzana</li>   
+         </ul>
+    </div>,
+    document.getElementById("root")
+);
+*/
+
+
+
+const Interpolar = () => {
+
+    const [numero, setNumber] = React.useState(0); 
+    
+        return(
+            <div>
+                <h1>  </h1> 
+                <hr />
+                </div>
+        );
+};
+
+
+ReactDOM.render(<Interpolar />, document.getElementById("root"));
+</script>
+
+
+
+
+
+</body>
+</html>
